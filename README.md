@@ -1,4 +1,4 @@
-# n3
+# nuxt_ssr
 
 > My posh Nuxt.js project
 

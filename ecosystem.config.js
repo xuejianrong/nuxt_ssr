@@ -30,11 +30,11 @@ module.exports = {
    */
   deploy : {
     production : {
-      user : 'node',
-      host : '212.83.163.1',
+      user : 'admin',
+      host : '118.178.133.200:3000',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
-      path : '/var/www/production',
+      repo : 'git@github.com:xuejianrong/nuxt_ssr.git',
+      path : '/home/admin/nuxt_pt/',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
