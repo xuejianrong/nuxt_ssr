@@ -11,6 +11,7 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
+    "setup": "pm2 deploy ecosystem.config.js production setup",
     "update": "pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {

@@ -7,8 +7,8 @@ module.exports = {
 
     // First application
     {
-      name      : 'API',
-      script    : 'app.js',
+      name      : 'nuxt_ssr',
+      script    : 'server/index',
       env: {
         COMMON_VARIABLE: 'true'
       },
@@ -16,12 +16,6 @@ module.exports = {
         NODE_ENV: 'production'
       }
     },
-
-    // Second application
-    {
-      name      : 'WEB',
-      script    : 'web.js'
-    }
   ],
 
   /**
