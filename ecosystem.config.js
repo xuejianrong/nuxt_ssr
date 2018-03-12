@@ -29,7 +29,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:xuejianrong/nuxt_ssr.git',
       path : '/home/admin/nuxt_pt/nuxt_ssr/production',
-      'post-deploy' : 'yarn install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'yarn install && npm run build && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
       user : 'admin',
