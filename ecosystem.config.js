@@ -8,7 +8,7 @@ module.exports = {
     // First application
     {
       name      : 'nuxt_ssr',
-      script    : 'server/index',
+      script    : 'server/index.js',
       env: {
         COMMON_VARIABLE: 'true'
       },
