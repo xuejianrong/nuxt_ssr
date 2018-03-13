@@ -18,6 +18,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import services from '../../helper/services'
 
 export default {
   head() {
@@ -28,8 +29,9 @@ export default {
   components: {
     Logo
   },
-  created() {
-    // document.head.title = '1216545616'
+  async mounted() {
+    let response = await services.local.getUserList();
+    console.log(response);
   }
 }
 </script>

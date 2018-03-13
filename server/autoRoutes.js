@@ -14,7 +14,7 @@ exports['auto'] = function (app) {
     console.log(`import controller from file ${f}...`)
     let name = f.substring(0, f.length - 3)
     exports[name] = require('./controllers/' + f)
-    router.use('/oss/' + name, exports[name].routes(), exports[name].allowedMethods())
+    router.use('/' + name, exports[name].routes(), exports[name].allowedMethods())
     app.use(exports[name].routes(), exports[name].allowedMethods())
   }
 }

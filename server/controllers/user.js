@@ -1,5 +1,5 @@
 const router = require('koa-router')()
-router.get('/index', async function (ctx, next) {
+router.get('/list', async function (ctx, next) {
   ctx.body = [
     {
       name:'yipeng', age: '29'

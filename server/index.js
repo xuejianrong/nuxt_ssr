@@ -1,5 +1,5 @@
 const Log4js = require('koa-log4')
-const LogConf = require('./log4.config')
+const LogConf = require('../config/log4')
 const Koa = require('koa')
 const path = require('path')
 const { Nuxt, Builder } = require('nuxt')
@@ -13,22 +13,13 @@ const port = process.env.PORT || 3000
 let config = require('../nuxt.config.js')
 config.dev = !(app.env === 'production')
 
-// 生成logs目录 && 加载配置文件 start
-const logPath = path.join(__dirname, 'logs')
-try {
-  require('fs').mkdirSync(logPath)
-} catch (err) {
-  if (err.code !== 'EEXIST') {
-    console.error('Could not set up log directory, error was: ', err)
-    process.exit(1)
-  }
-}
-Log4js.configure(LogConf, {cwd: logPath})
+Log4js.configure(LogConf)
 // 生成logs目录 && 加载配置文件 end
 
-// if (!config.dev) {
-//   app.use(Log4js.koaLogger(Log4js.getLogger('http'), {level: 'auto'}))
-// }
+if (!config.dev) {
+  app.use(Log4js.koaLogger(Log4js.getLogger('http'), {level: 'auto'}))
+}
+// app.use(Log4js.koaLogger(Log4js.getLogger('http'), {level: 'auto'}))
 
 async function start() {
   // Instantiate nuxt.js
