@@ -1,4 +1,4 @@
-import { apiPath } from '../config/app'
+import { apiPath } from '../config/api'
 import axios from 'axios'
 import utils from './utils'
 /**

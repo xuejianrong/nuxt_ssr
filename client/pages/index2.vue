@@ -18,7 +18,6 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import services from '../../helper/services'
 
 export default {
   head() {
@@ -30,7 +29,8 @@ export default {
     Logo
   },
   async mounted() {
-    let response = await services.local.getUserList();
+    const response = await services.local.getUserList();
+    const response2 = await services.app.get_fan_contrib();
     console.log(response);
   }
 }
