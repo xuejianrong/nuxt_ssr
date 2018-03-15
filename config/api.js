@@ -8,7 +8,7 @@ module.exports = {
       },
       getRankFans: {
         method: 'get',
-        url: '/rank_fans/'
+        url: '/rank_fans'
       }
     },
     /*
