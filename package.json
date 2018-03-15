@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production babel-node server/index.js",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "eslint --ext .js,.vue --ignore-path .eslintignore .",
     "precommit": "npm run lint",
     "setup": "pm2 deploy ecosystem.config.js production setup",
     "update": "pm2 deploy ecosystem.config.js production"
@@ -24,6 +24,7 @@
     "koa-router": "^7.4.0",
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0",
+    "koa-log4": "^2.3.0",
     "sass-loader": "^6.0.7"
   },
   "devDependencies": {
@@ -33,7 +34,6 @@
     "eslint": "^4.15.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.3.0",
-    "koa-log4": "^2.3.0",
     "nodemon": "^1.11.0"
   }
 }

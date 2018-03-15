@@ -1,12 +1,13 @@
-const router = require('koa-router')()
-router.get('/index', async function (ctx, next) {
+const router = require('koa-router')();
+
+router.get('/index', async (ctx, next) => {
   ctx.body = [
     {
-      name:'index', age: '29'
+      name: 'index', age: '29',
     },
     {
-      name:'yihang', age: '18'
+      name: 'yihang', age: '18',
     }
-  ]
-})
-module.exports = router
+  ];
+});
+module.exports = router;

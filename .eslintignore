@@ -1,0 +1,18 @@
+# logs
+logs
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+.idea
+
+helper
+
+config
+
+ecosystem.config.js
+
+nuxt.config.js

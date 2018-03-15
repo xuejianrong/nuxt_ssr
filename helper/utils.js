@@ -4,7 +4,7 @@
  */
 export default {
   isFunction(fn) {
-    return Object.prototype.toString.call(fn) === '[object Function]'
+    return Object.prototype.toString.call(fn) === '[object Function]';
   },
   /**
    *@param {Object}|{Array} object 需要遍历处理的对象或数组
@@ -34,7 +34,7 @@ export default {
       if (isObj) {
         for (name in object) {
           if (callback.call(object[name], name, object[name]) === false) {
-            break
+            break;
           }
         }
       } else {
@@ -42,7 +42,7 @@ export default {
         }
       }
     }
-    return object
+    return object;
   },
   /**
    *@param {Number} type rem需要初始化的h5类型，0 普通全屏、1 悬浮窗

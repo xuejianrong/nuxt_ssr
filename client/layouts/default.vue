@@ -5,14 +5,14 @@
 </template>
 
 <script>
-  import utils from '../../helper/utils'
+import utils from '../../helper/utils';
 
-  export default {
-    mounted() {
-      // rem的初始化，可接受type(number)参数来适配不一样的窗口
-      utils.remInit();
-    }
-  }
+export default {
+  mounted() {
+    // rem的初始化，可接受type(number)参数来适配不一样的窗口
+    utils.remInit();
+  },
+};
 </script>
 
 <style lang="scss">
