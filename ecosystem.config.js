@@ -9,7 +9,7 @@ module.exports = {
     {
       name      : 'nuxt_ssr',
       script    : 'server/index.js',
-      interpreter: './node_modules/.bin/babel-node',
+      exec_interpreter: 'babel-node',
       env: {
         COMMON_VARIABLE: 'true'
       },
