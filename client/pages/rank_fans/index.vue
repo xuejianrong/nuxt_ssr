@@ -1,7 +1,10 @@
 <template>
-  <div class="rank-fans">rank_fans</div>
+  <div class="rank-fans">
+    <loading v-show="loading"/>
+  </div>
 </template>
 <script>
+import loading from '~/components/loading';
 import services from '../../../helper/services';
 
 export default {
@@ -12,7 +15,9 @@ export default {
     };
   },
   data() {
-    return {};
+    return {
+      loading: true,
+    };
   },
   watch: {},
   computed: {},
@@ -25,7 +30,9 @@ export default {
       console.log(res);
     },
   },
-  components: {},
+  components: {
+    loading,
+  },
 };
 </script>
 
