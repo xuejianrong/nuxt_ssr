@@ -8,7 +8,8 @@ module.exports = {
     // First application
     {
       name      : 'nuxt_ssr',
-      script    : 'babel-node server/index.js',
+      script    : 'server/index.js',
+      interpreter: 'babel-node',
       env: {
         COMMON_VARIABLE: 'true'
       },
