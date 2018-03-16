@@ -1,7 +1,7 @@
 <template>
   <div class="rank-fans">
     <loading v-show="loading"/>
-    <div style="font-size: 30px">test1</div>
+    <div style="font-size: 30px">test2</div>
   </div>
 </template>
 <script>
