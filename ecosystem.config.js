@@ -8,7 +8,7 @@ module.exports = {
     // First application
     {
       name      : 'nuxt_ssr',
-      script    : 'server/index.js',
+      script    : 'babel-node server/index.js',
       env: {
         COMMON_VARIABLE: 'true'
       },
@@ -29,7 +29,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:xuejianrong/nuxt_ssr.git',
       path : '/home/admin/nuxt_pt/nuxt_ssr/production',
-      'post-deploy' : 'yarn install && yarn build && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'yarn install && yarn build && yarn start'
     },
     dev : {
       user : 'admin',
