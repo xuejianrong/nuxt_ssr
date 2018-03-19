@@ -6,7 +6,7 @@
         n3
       </h1>
       <h2 class="subtitle">
-        My posh Nuxt.js project 2222 3333  4444 auto
+        My posh Nuxt.js project check!!!!!
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
