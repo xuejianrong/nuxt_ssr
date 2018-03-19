@@ -3,6 +3,9 @@ const resolve = require('path').resolve
 
 module.exports = {
   mode: 'ssr',
+  env: {
+    baseUrl: process.env.isDev || true,
+  },
 
   /*
   ** Headers of the page

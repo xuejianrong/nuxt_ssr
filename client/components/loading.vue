@@ -24,9 +24,9 @@ export default {
   .loading {
     position: fixed;
     left: 50%;
-    top: rem(100);
-    width: rem(70);
-    margin-left: rem(-35);
+    top: rem(200);
+    width: rem(140);
+    margin-left: rem(-70);
     z-index: 99;
   }
   .loading img:nth-child(2) {

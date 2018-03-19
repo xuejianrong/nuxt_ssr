@@ -1,4 +1,4 @@
-$rem: 18;
+$rem: 37.5;
 
 $base-font-size: $rem !default;
 
@@ -10,4 +10,30 @@ $base-font-size: $rem !default;
   $target: strip-unit($value);
   $base: strip-unit($context);
   @return $target / $base + rem
+}
+
+@mixin flex($layoutX: center, $layoutY: center) {
+  display: flex;
+  display: -webkit-flex;
+  @if $layoutX == center {
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+  } @else if $layoutX == between {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+  } @else if $layoutX == around {
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+  }
+  @if $layoutY == center {
+    align-items: center;
+    -webkit-align-items: center;
+  } @else if $layoutY == start {
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+  } @else if $layoutY == end {
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+  }
 }

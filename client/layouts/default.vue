@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+  <nuxt/>
 </template>
 
 <script>
@@ -17,5 +15,4 @@ export default {
 
 <style lang="scss">
 @import "../assets/css/init.scss";
-@import "../assets/css/base.scss";
 </style>
