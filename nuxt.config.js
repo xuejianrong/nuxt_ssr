@@ -4,7 +4,7 @@ const resolve = require('path').resolve
 module.exports = {
   mode: 'ssr',
   env: {
-    baseUrl: process.env.isDev || true,
+    PATH_TYPE: process.env.PATH_TYPE || 'dev',
   },
 
   /*

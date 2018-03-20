@@ -1,4 +1,4 @@
-const isDev = process.env.isDev;
+const NODE_ENV = process.env.NODE_ENV;  // development || production
 module.exports = {
   apiPath: {
     local: {
@@ -17,7 +17,7 @@ module.exports = {
     * */
     app: {
       // host需要写https，有可能是服务器之间互相请求，这个时候没有协议头会报404
-      host: isDev ? 'http://ceshi.wxh5.nagezan.net' : 'https://api.h5.zb.nagezan.net',
+      host: NODE_ENV === 'development' ? 'http://ceshi.wxh5.nagezan.net' : 'https://api.h5.zb.nagezan.net',
       get_fan_contrib: {
         method: 'post',
         url: '/cgi-bin/get_fan_contrib'
@@ -27,7 +27,7 @@ module.exports = {
     * 其他接口
     * */
     other: {
-      host: isDev ? 'http://114.55.10.164:9060' : 'https://api.h5.zb.nagezan.net',
+      host: NODE_ENV === 'development' ? 'http://114.55.10.164:9060' : 'https://api.h5.zb.nagezan.net',
     },
   }
 };

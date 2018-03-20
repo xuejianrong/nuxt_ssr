@@ -10,9 +10,6 @@ const app = new Koa();
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
 
-// 设置正式服 / 测试服
-process.env.isDev = !(app.env === 'production');
-
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js');
 
