@@ -11,7 +11,11 @@ module.exports = {
       getRankFans: {
         method: 'get',
         url: '/rank_fans'
-      }
+      },
+      getRankFansTest: {
+        method: 'get',
+        url: '/rank_fans/testData'
+      },
     },
     /*
     * 客户端接口
@@ -22,7 +26,7 @@ module.exports = {
       get_fan_contrib: {
         method: 'post',
         url: '/cgi-bin/get_fan_contrib'
-      }
+      },
     },
     /*
     * 其他接口
