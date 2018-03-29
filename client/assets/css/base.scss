@@ -12,9 +12,17 @@ $base-font-size: $rem !default;
   @return $target / $base + rem
 }
 
-@mixin flex($layoutX: center, $layoutY: center) {
+@mixin flex($layoutX: center, $layoutY: center, $direct: row) {
   display: flex;
   display: -webkit-flex;
+  @if $direct == row {
+    flex-direction: row;
+    -webkit-flex-direction: row;
+  } @else if $direct == col {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+
   @if $layoutX == center {
     align-items: center;
     justify-content: center;
@@ -25,6 +33,9 @@ $base-font-size: $rem !default;
   } @else if $layoutX == around {
     justify-content: space-around;
     -webkit-justify-content: space-around;
+  } @else if $layoutX == left {
+    justify-content: left;
+    -webkit-justify-content: left;
   }
   @if $layoutY == center {
     align-items: center;

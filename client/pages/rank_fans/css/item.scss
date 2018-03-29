@@ -1,0 +1,139 @@
+@import "../../../assets/css/base";
+.item {
+  padding: 14px 10px 13px 12px;
+  position: relative;
+  @include flex(left, center);
+
+  &::after {
+    content: '';
+    display: block;
+    width: 85%;
+    position: absolute;
+    left: 15%;
+    height: 1px;
+    bottom: 0;
+    background: rgb( 229, 229, 229);
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+
+.ceil1 {
+  font-size: rem(32);
+  width: rem(78);
+  color: rgb(72, 68, 68);
+  text-align: left;
+  margin-left: rem(26);
+}
+
+.ceil2 {
+  width: rem(86);
+  height: rem(86);
+
+  img {
+    width: rem(86);
+    height: rem(86);
+    border-radius: 50%;
+  }
+}
+
+.ceil3 {
+  @include flex(between, left, col);
+  margin-left: rem(34);
+  height: rem(66);
+
+  .top {
+    @include flex(left, center);
+
+    .name {
+      font-size: rem(28);
+    }
+  }
+
+  .bottom {
+    color: rgb(153, 153, 153);
+    font-size: rem(24);
+  }
+}
+
+.top1 {
+  padding-top: rem(8);
+}
+
+.ceil4 {
+  width: rem(72);
+  padding-top: rem(48);
+}
+
+.ceil5 {
+  width: rem(558);
+  @include flex(center, center, col);
+
+  .up {
+    position: relative;
+    width: rem(146);
+    height: rem(206);
+    padding-top: rem(60);
+
+    .head {
+      width: rem(146);
+      height: rem(146);
+      border-radius: 50%;
+      border: solid rem(4) rgb(255, 202, 23);
+    }
+
+    .crown {
+      position: absolute;
+      left: rem(-40);
+      top: 0;
+      width: rem(126);
+      height: rem(116);
+      z-index: -1;
+    }
+  }
+
+  .mid {
+    .name {
+      color: rgb(72, 68, 68);
+      font-size: rem(32);
+      padding: rem(10) 0;
+    }
+  }
+
+  .down {
+    font-size: rem(24);
+    color: rgb(153, 153, 153);
+  }
+}
+
+.ceil6 {
+  width: rem(72);
+  padding: 0 rem(18);
+  margin-right: rem(30);
+}
+
+.ceil7 {
+  @extend .ceil2;
+  position: relative;
+
+  .head {
+    border: solid rem(2) rgb(216, 216, 216);;
+  }
+
+  .crown {
+    position: absolute;
+    left: rem(-8);
+    top: rem(-28);
+    width: rem(52);
+    height: rem(48);
+    z-index: -1;
+  }
+}
+
+.ceil8 {
+  @extend .ceil7;
+
+  .head {
+    border: solid rem(2) rgb(204, 131, 129);;
+  }
+}

@@ -3,6 +3,9 @@
     <loading v-show="loading" />
     <tab :status.sync="status" />
     <nodata v-if="show.nodata" />
+    <div class="list">
+      <item v-for="(item, i) in weekList" :key="i" :index="i" :item="item"></item>
+    </div>
   </div>
 </template>
 <script>
@@ -10,19 +13,20 @@ import loading from '~/components/loading';
 import services from '../../../helper/services';
 import tab from './comp/tab';
 import nodata from './comp/nodata';
+import item from './comp/item';
 
 export default {
   name: 'rank_fans',
   head() {
     return {
       title: '粉丝贡献榜',
-      weekList: [],
     };
   },
   data() {
     return {
       loading: true,
       status: 0, // 0 周榜，1 总榜
+      weekList: [],
 
       /*
       * 显示
@@ -42,8 +46,9 @@ export default {
       // const res = await services.local.getRankFans();
       const res = await services.local.getRankFansTest();
       this.loading = false;
-      if (res.code === 0) {
-        this.weekList = res;
+      console.log(res);
+      if (res.errno === 0) {
+        this.weekList = res.data.fans;
       }
     },
   },
@@ -51,6 +56,7 @@ export default {
     loading,
     tab,
     nodata,
+    item,
   },
 };
 </script>
