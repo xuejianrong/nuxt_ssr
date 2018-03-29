@@ -8,14 +8,13 @@ const AutoRoutes = require('./autoRoutes');
 const ip = require('ip');
 
 const app = new Koa();
-const isDev = !(app.env === 'production');
-const host = process.env.HOST || (isDev ? ip.address() : '0.0.0.0');
+const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js');
 
-config.dev = !isDev;
+config.dev = !(app.env === 'production');
 
 Log4js.configure(LogConf);
 // 生成logs目录 && 加载配置文件 end
