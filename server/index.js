@@ -9,6 +9,7 @@ const AutoRoutes = require('./autoRoutes');
 const app = new Koa();
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
+const io = require('socket.io')(app);
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js');
@@ -48,6 +49,12 @@ async function start() {
   });
 
   app.listen(port, host);
+  io.on('connection', (socket) => {
+    socket.emit('news', { hello: 'world' });
+    socket.on('my other event', (data) => {
+      console.log(data);
+    });
+  });
   console.log(`Server listening on http://${host}:${port}`); // eslint-disable-line no-console
 }
 

@@ -44,7 +44,9 @@ export default {
   methods: {
     async getData() {
       // const res = await services.local.getRankFans();
-      const res = await services.local.getRankFansTest();
+      const res = await services.local.getRankFansTest({
+        week: 0,
+      });
       this.loading = false;
       console.log(res);
       if (res.errno === 0) {

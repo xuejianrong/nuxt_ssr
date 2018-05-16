@@ -21,11 +21,12 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
     "koa": "^2.3.0",
+    "koa-log4": "^2.3.0",
     "koa-router": "^7.4.0",
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0",
-    "koa-log4": "^2.3.0",
-    "sass-loader": "^6.0.7"
+    "sass-loader": "^6.0.7",
+    "socket.io": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
