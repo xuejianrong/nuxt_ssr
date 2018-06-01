@@ -1,6 +1,6 @@
 # nuxt_ssr
 
-> My posh Nuxt.js project
+> 使用nuxt+vue，实现了node的直出方案。再结合git和pm2实现的发布管理，适合中小型需要开发自行发布的项目，可避免人为性失误，提高线上稳定性
 
 ## Build Setup
 
@@ -18,5 +18,3 @@ $ yarn start
 # generate static project
 $ yarn run generate
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
